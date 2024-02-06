@@ -96,3 +96,4 @@ b = selection_sort(a[:])
 
 print(a)
 print(b)
+
