@@ -1,17 +1,4 @@
-def selection_sort(arr):
-    N = len(arr)
-    for i in range(N-1):
-        m = arr[i]
-        p = i
-        for j in range(i+1, N):
-            if m > arr[j]:
-                m = arr[j]
-                p = j
-        if p != i:
-            t = arr[i]
-            arr[i] = arr[p]
-            arr[p] = t
-    return arr
+
 
 def split_and_merge_list(a):
     N1 = len(a) // 2
@@ -78,6 +65,23 @@ def heapify(arr,n,i):
         arr[i] ,arr[largest] = arr[largest] , arr[i]
         heapify(arr,n,largest)
 
+
+
+def selectionsort(arr):
+    n = len(arr)
+
+    for i in range(n-1):
+        m = arr[i]
+        pi = i
+        for j in range(i+1,n):
+            if m > arr[j]:
+                m = arr[j]
+                pi = j
+
+    if pi != i:
+        arr[i],arr[pi] = arr[pi],arr[i]
+
+    return arr
 
 
 
